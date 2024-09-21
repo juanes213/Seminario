@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
+import os
 
 # Load your data
 df_10 = pd.read_excel('concatenado_10.xlsx')
@@ -222,4 +223,4 @@ def update_graphs(period, slider_0, drpdwn_0):
             fig_heatmap_low, fig_heatmap_high)
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
