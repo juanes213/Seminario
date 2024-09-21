@@ -223,4 +223,4 @@ def update_graphs(period, slider_0, drpdwn_0):
             fig_heatmap_low, fig_heatmap_high)
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
+    app.run_server(host='0.0.0.0', port=8080, debug=True)
