@@ -4,8 +4,6 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objs as go
 import pandas as pd
-import numpy as np
-import os
 
 # Load your data
 df_10 = pd.read_excel('concatenado_10.xlsx')
@@ -175,8 +173,8 @@ def update_graphs(period, slider_0, drpdwn_0):
         fig.update_layout(yaxis={'categoryorder':'total ascending'})
         return fig
 
-    fig_distribution = create_bar_chart(df_low, 'Distribución de la Demanda Baja (≤ 40)')
-    fig_distribution_high = create_bar_chart(df_high, 'Distribución de la Demanda Alta (> 40)')
+    # fig_distribution = create_bar_chart(df_low, 'Distribución de la Demanda Baja (≤ 40)')
+    # fig_distribution_high = create_bar_chart(df_high, 'Distribución de la Demanda Alta (> 40)')
 
     # Boxplots
     fig_boxplot_low = px.box(df_low, y='Demanda_Max_Estimada', 
